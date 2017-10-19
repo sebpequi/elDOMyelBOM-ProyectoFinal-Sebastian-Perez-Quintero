@@ -13,7 +13,7 @@ a, ul {
 }
 
 table, th, tr, td {
-	border-collapse:collapse;	
+	border-collapse:collapse;
 }
 
 #caja_sitio {
@@ -24,25 +24,25 @@ table, th, tr, td {
 /*** Animación Caja Sitio ***/
 @-webkit-keyframes entradacaja {
 	0% {
-		margin-top: -50%;	
+		margin-top: -50%;
 	}
 	70% {
-		margin-top: 5%;	
+		margin-top: 5%;
 	}
 	100% {
-		margin-top: 0%;	
+		margin-top: 0%;
 	}
 }
 
 @-webkit-keyframes salidacaja {
 	0% {
-		margin-top: 0%;	
+		margin-top: 0%;
 	}
 	70% {
-		margin-top: 5%;	
+		margin-top: 5%;
 	}
 	100% {
-		margin-top: -50%;	
+		margin-top: -50%;
 	}
 }
 
@@ -61,12 +61,12 @@ table, th, tr, td {
 	margin:0;
 	padding:0;
 	text-align:center;
-	word-wrap:break-word;		
+	word-wrap:break-word;
 }
 
 /*** El Menu se diseño en los media queries ***/
 #mostrar_menu {
-	display:none;	
+	display:none;
 }
 
 /*** Area del contenido ***/
@@ -77,7 +77,7 @@ table, th, tr, td {
 
 #anuncio_tabla {
 	display:none;
-	text-align:center;	
+	text-align:center;
 	font-size:12px;
 }
 
@@ -89,7 +89,7 @@ table, th, tr, td {
 /*** Tabla lista de los estudiantes ***/
 #anuncio_tabla {
 	display:none;
-	text-align:center;	
+	text-align:center;
 	font-size:12px;
 }
 
@@ -104,31 +104,31 @@ table, th, tr, td {
 
 #mlest thead th:first-child {
 	vertical-align:bottom;
-	background:none;	
-}
-
-#mlest thead th:nth-child(2) {
-	vertical-align:bottom;	
 	background:none;
 }
 
-#mlest thead th:nth-child(3) {	
+#mlest thead th:nth-child(2) {
+	vertical-align:bottom;
+	background:none;
+}
+
+#mlest thead th:nth-child(3) {
 	background:#21334d;
 	border-radius:10px 10px 0 0;
 	color:white;
 	font-size:13px;
 }
-#mlest thead th:nth-child(4) {	
+#mlest thead th:nth-child(4) {
 	background:#b0dc00;
 	border-radius:10px 10px 0 0;
-	font-size:13px;	
+	font-size:13px;
 }
 
-#mlest thead th:last-child {	
+#mlest thead th:last-child {
 	background:#d27000;
 	border-radius:10px 10px 0 0;
 	font-size:13px;
-	color:white;	
+	color:white;
 }
 
 #mlest #content_mlest tr td {
@@ -141,17 +141,17 @@ table, th, tr, td {
 }
 
 #mlest #content_mlest tr td:nth-child(2) {
-	border: solid 1px black;		
+	border: solid 1px black;
 }
 
-#mlest #content_mlest tr td:nth-child(3) {	
+#mlest #content_mlest tr td:nth-child(3) {
 	background:rgba(33, 51, 77, 0.3);
 }
-#mlest #content_mlest tr td:nth-child(4) {	
+#mlest #content_mlest tr td:nth-child(4) {
 	background:rgba(176, 220, 0, 0.3);
 }
 
-#mlest #content_mlest tr td:last-child {	
+#mlest #content_mlest tr td:last-child {
 	background:rgba(210, 112, 0, 0.3);
 }
 
@@ -162,25 +162,25 @@ table, th, tr, td {
 
 #promedio h2 {
 	text-align:center;
-	color:#113048;	
+	color:#113048;
 	margin:0;
 	padding:0;
 }
 
 #promedio h3 {
 	text-align:center;
-	color:#113048;	
+	color:#113048;
 
 }
 
 #promedio h4 {
 	text-align:center;
-	color:#113048;	
+	color:#113048;
 	font-size:14px;
 }
 
 #elpromedio {
-	font-weight:900;	
+	font-weight:900;
 }
 
 /*** Area de los Mensajes ***/
@@ -190,7 +190,7 @@ table, th, tr, td {
 
 #mensajes_aliento {
 	display:flex;
-	flex-direction:row;	
+	flex-direction:row;
 	padding:0;
 	margin:0;
 }
@@ -206,7 +206,7 @@ table, th, tr, td {
 }
 
 #mensajes_aliento li:first-child {
-	width:33%;	
+	width:33%;
 	margin-right:2%;
 }
 
@@ -221,17 +221,17 @@ table, th, tr, td {
 }
 #nombre_mejor, #nombre_malo {
 	font-size:18px;
-	font-family: 'Quicksand', sans-serif;	
+	font-family: 'Quicksand', sans-serif;
 	font-weight:900;
 }
 
 /*** Mostrar los mensajes de buen estudiante y estudiante regular ***/
 #elmejorestudiante {
-	display:none;	
+	display:none;
 }
 
 #masesfuerzo {
-	display:none;	
+	display:none;
 }
 
 /*** Mostrar las personas que van Ganando y los que van perdiendo ***/
@@ -242,7 +242,7 @@ table, th, tr, td {
 
 #lasnoticias h4 {
 	text-align:center;
-	color:#fff;	
+	color:#fff;
 	font-size:14px;
 	margin:2px 0 2px 0;
 	padding: 10px 0 10px 0;
@@ -253,7 +253,7 @@ table, th, tr, td {
 
 #lasnoticias p {
 	text-align:justify;
-	color:#113048;	
+	color:#113048;
 }
 
 #ganadoresyperdedores {
@@ -273,7 +273,7 @@ table, th, tr, td {
 #losganadores {
 	margin:10px 0 10px 0;
 	padding:5px 2px 5px 3px;
-	text-align:center;	
+	text-align:center;
 }
 
 #losganadores li {
@@ -298,16 +298,16 @@ table, th, tr, td {
 	padding:5px 2px 5px 3px;
 	text-align:center;
 }
-  
+
 #losperdedores li {
 	text-align:left;
-}   
-  
+}
+
 #losperdedores li::before {
 	content: url(imagenes/vamal.png);
 	margin-right:10px;
 	text-align:left;
-} 
+}
 
 }
 
@@ -330,12 +330,12 @@ footer span {
 #caja_sitio {
 	width:100%;
 	max-width:700px;
-	padding: 10px 15px 20px 15px;	
+	padding: 10px 15px 20px 15px;
 	margin: 10px auto 15px auto;
 	border-radius: 10px;
 	filter: drop-shadow(3px 3px 3px gray);
-}	
-	
+}
+
 /*** Area del Header ***/
 #logo_titulo {
 	display:flex;
@@ -351,37 +351,73 @@ footer span {
 	padding-left:5%;
 }
 
-/*** Menu ***/
-nav #menu_comandos {
-	margin:0 0 15px 0;
-	padding:0;
-	text-align:center;	
+/*** Section Form Ingresar Notas ***/
+#aIngresarNotas {
+	background-color: rgba(0, 13, 130, 0.59);
+	padding:20px 10px 20px 10px;
 }
 
+#codigoEst, #nota1Est, #nota2Est {
+	max-width:80px;
+}
 
-nav #menu_comandos li {
-	margin-top:10px;
-	border: solid 1px #f2f2f2;
+#aIngresarNotas > input {
+	padding: 5px 10px;
+}
+
+#ingresarDatos {
+	padding: 10px 15px 10px 15px;
+	border: none;
 	border-radius:10px;
-	display:inline-block;
 	color: white;
 	cursor:pointer;
 
 	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
 	background: -o-linear-gradient(top, #0045A6 , #03275A);
 	background: -moz-linear-gradient(top, #0045A6 , #03275A);
-	background: linear-gradient(top, #0045A6 , #03275A);	
+	background: linear-gradient(top, #0045A6 , #03275A);
 }
 
-nav #menu_comandos li a {
+#ingresarDatos:hover {
+	color: white;
+	cursor:pointer;
+
+	background: -webkit-linear-gradient(top, #a60210 , #5b0303);
+	background: -o-linear-gradient(top, #a60210 , #5b0303);
+	background: -moz-linear-gradient(top, #a60210 , #5b0303);
+	background: linear-gradient(top, #a60210 , #5b0303);
+}
+
+#mensajeProceso {
 	width:auto;
-	color:white;
-	display:block;	
-	padding:10px 15px 10px 15px;			
+	margin-top:10px;
+	background-color: white;
+	color:#e2000e;
+	padding:10px;
+	display:none;
 }
 
-nav #menu_comandos li:first-child {
-	margin-right:10px;	
+#btnCalcularP {
+	margin-top:10px;
+	border: solid 1px #f2f2f2;
+	border-radius:10px;
+	color: white;
+	cursor:pointer;
+	width:auto;
+	display:block;
+	padding:10px 15px 10px 15px;
+
+	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
+	background: -o-linear-gradient(top, #0045A6 , #03275A);
+	background: -moz-linear-gradient(top, #0045A6 , #03275A);
+	background: linear-gradient(top, #0045A6 , #03275A);
+}
+
+#btnCalcularP:hover, #mensajes_aliento > li:hover, #ganadores > h4:hover, #perdedores > h4:hover {
+	background: -webkit-linear-gradient(top, #02a603 , #035b04);
+	background: -o-linear-gradient(top, #02a603 , #035b04);
+	background: -moz-linear-gradient(top, #02a603 , #035b04);
+	background: linear-gradient(top, #02a603 , #035b04);
 }
 
 /*** Las tablas de los datos ***/
@@ -408,10 +444,10 @@ nav #menu_comandos li:first-child {
 @media screen and (max-width:699px) {
 #caja_sitio {
 	width:98%;
-	padding: 10px 1% 20px 1%;	
+	padding: 10px 1% 20px 1%;
 	margin-bottom:15px;
 	border-radius: 0 0 10px 10px;
-}	
+}
 
 /*** Area del Header mostrada como una columna ***/
 #logo_titulo {
@@ -433,34 +469,34 @@ nav #menu_comandos li:first-child {
 
 /*** Menu ***/
 nav {
-	overflow:hidden;	
+	overflow:hidden;
 }
 #mostrar_menu {
 	display:block;
 	text-align:center;
 	padding:20px 0 15px 0;
-	margin: 0;	
+	margin: 0;
 }
 
 #mostrar_menu::before {
 	content: url(imagenes/menu-logox16.png);
-	margin-right:5px; 	
+	margin-right:5px;
 }
 
 #menu_comandos {
 	margin:0 0 5px 0;
 	padding:0;
-	display: none;	
-	flex-direction:column;	
+	display: none;
+	flex-direction:column;
 }
 
 /*** Animación menu movil ***/
 @keyframes mostrarmenu {
 	0% {
-		margin-top: -50%;	
+		margin-top: -50%;
 	}
 	100% {
-		margin-top: 0%;	
+		margin-top: 0%;
 	}
 }
 
@@ -475,22 +511,22 @@ nav #menu_comandos li {
 	background: -o-linear-gradient(top, #0045A6 , #03275A);
 	background: -moz-linear-gradient(top, #0045A6 , #03275A);
 	background: linear-gradient(top, #0045A6 , #03275A);
-	opacity:0.5;	
+	opacity:0.5;
 }
 
 nav #menu_comandos li a {
 	width:auto;
 	padding:15px 15px 15px 15px;
 	color:white;
-	display:block;	
+	display:block;
 }
 
 nav #menu_comandos li:first-child {
-	border-radius: 15px 15px 0 0;	
+	border-radius: 15px 15px 0 0;
 }
 
 nav #menu_comandos li:last-child {
-	border-radius: 0 0 15px 15px;	
+	border-radius: 0 0 15px 15px;
 }
 /*** Las tablas de los datos ***/
 #contenedor_tablas {
@@ -499,7 +535,7 @@ nav #menu_comandos li:last-child {
 }
 
 #anuncio_tabla {
-	display:block;	
+	display:block;
 }
 
 /*** Tabla lista de los estudiantes ***/
@@ -510,7 +546,7 @@ nav #menu_comandos li:last-child {
 }
 
 #mlest {
-	margin:0 auto 0 auto;	
+	margin:0 auto 0 auto;
 }
 
 /*** Tabla del promedio ***/
@@ -521,4 +557,3 @@ nav #menu_comandos li:last-child {
 
 
 }
-
