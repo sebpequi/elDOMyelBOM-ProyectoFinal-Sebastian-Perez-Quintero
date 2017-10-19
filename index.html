@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+<meta name="author" content="Sebastian Pérez Quintero">
+<meta name="keywords" content="estudiantes NextU, JavaScript, JSON">
+<meta name="description" content="Lista estudiantes materia JS de NEXTU">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Quicksand" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/estilos.css">
+
+<title>Evaluación Final - JS lo esencial</title>
+</head>
+
+<body id="entrada" onLoad="pageload()">
+	<div id="caja_sitio">
+        <header>
+        	<div id="logo_titulo">
+            	<div id="logo">
+                	<svg>
+						<image xlink:href="imagenes/logou.svg" width="100%" ></image>
+					</svg>
+                </div>
+                <div id="titulopage">
+                    <h1>Lista de los Estudiantes de NextU del curso JS</h1>
+                </div>
+            </div>
+           	<span id="mostrar_menu">Clic para <span id="vermenu">Mostrar</span> Menu</span>            
+            <nav>
+                <ul id="menu_comandos">
+                    <li onClick="mostrar_Lista(estudiantes)"><a>Mostrar Lista</a></li>
+                    <li onClick="mostrar_promedio(estudiantes)"><a href="#promedio">Calcular Promedio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="contenido">
+            <div id="contenedor_tablas">
+           	 	<p id="anuncio_tabla"><strong>Navegando en mis notas...</strong><br>Arrastrar la tabla a los lados para ver todos los datos</p>
+                <section id="tablaestudiantes">
+                    <table id="mlest">
+                        <thead>
+                            <th>Código</th>
+                            <th>Nombre</th>
+                            <th>Nota 1</th>
+                            <th>Nota 2</th>
+                            <th>Prom</th>
+                        </thead>
+                        <tbody id="content_mlest">
+                        </tbody>
+                    </table>
+                </section>
+                <section id="promedio">
+                	<h2>Información de interes</h2>
+					<p>El promedio de nota entre los estudiantes es de: <span id="elpromedio"></span></p>
+                	<h3>Progresos...</h3>
+                    <div id="mensajes">
+                    	<ul id="mensajes_aliento">
+                            <li onClick="elmejor(estudiantes)">El mejor</li>
+                            <li onClick="masesfuerzo(estudiantes)">Necesita más Esfuerzo</li>
+                        </ul>
+                        <p id="elmejorestudiante">Queremos felicitar a: <br><span id="nombre_mejor"></span><br> Por su dedicación en la certificación </p>
+                        <p id="masesfuerzo"><span id="nombre_malo"></span><span id="otro_nombremalo"></span><br>Es importante realizar un esfuerzo mayor <strong>¡Animo!</strong></p>
+                    </div>
+                    <!-- Area de los que van GANANDO y los que van PERDIENDO -->
+                    <div id="lasnoticias">
+                        <p>Realiza clic en los botones <strong>GANANDO</strong> y <strong>PERDIENDO</strong> para ver quiénes van Ganando la certificación y quienes estan en la cuerda floja...</p>
+                        <div id="ganadoresyperdedores">
+                            <div id="ganadores">
+                                <h4 onClick="lavanGanando(estudiantes)">GANANDO</h4>
+                                <ul id="losganadores">
+                                
+                                </ul>
+                            </div> 
+                            <div id="perdedores">    
+                                <h4 onClick="lavanPerdiendo(estudiantes)">PERDIENDO</h4>
+                                <ul id="losperdedores">
+    
+                                </ul>
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Design by Sebastian Pérez Quintero - CopyRight&copy;</span>
+    </footer>
+</body>
+<script type="text/javascript" src="js/javascript.js"></script>
+
+</html>
