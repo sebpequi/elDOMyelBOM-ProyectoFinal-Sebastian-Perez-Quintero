@@ -10,45 +10,33 @@ del sitio web, como por ejemplo los clics para mostrar menu y el efecto de onloa
 		document.getElementById("caja_sitio").style.animation = "entradacaja 1.5s linear";
 	}
 
-	//Declaramos el evento de click para mostrar y ocultar el menu
-	var uno = document.getElementById("mostrar_menu");
-	    dos = document.getElementById("menu_comandos");
-		ordentexto = document.getElementById("vermenu");
-	    y = true;
-	uno.onclick = function() {
-		if(y){
-			dos.style.display = "flex";
-			dos.style.animation = "entradacaja 1s linear";
-			dos.style.marginTop ="0";
-			y = !y;
-			document.getElementById("vermenu").innerHTML = "Ocultar";
-		} else {
-			dos.style.marginTop = "-80%";
-			dos.style.animation = "salidacaja 1s linear";
-			y = !y;
-			document.getElementById("vermenu").innerHTML = "Mostrar";
-		}
-	}
-
 /*
 Declaramos el JSON Estudiantes para nuestra tabla
 */
-var estudiantes = [
-	{"codigo":1, "nombre":"Sebastian", "nota1":4.6, "nota2":5.0, "promedio":0 },
-	{"codigo":2, "nombre":"Yayita", "nota1":4.5, "nota2":3.9, "promedio":0},
-	{"codigo":3, "nombre":"Daniela", "nota1":4.5, "nota2":3.2, "promedio":0},
-	{"codigo":4, "nombre":"Sara", "nota1":3.9, "nota2":1.2, "promedio":0},
-	{"codigo":5, "nombre":"Juliana", "nota1":4.8, "nota2":3.9, "promedio":0},
-	{"codigo":6, "nombre":"Vanessa", "nota1":3.7, "nota2":1.5, "promedio":0},
-	{"codigo":7, "nombre":"Daniel", "nota1":1.8, "nota2":3.6, "promedio":0},
-	{"codigo":8, "nombre":"Monica", "nota1":1.0, "nota2":3.9, "promedio":0},
-	{"codigo":9, "nombre":"Isamar", "nota1":4.5, "nota2":4.0, "promedio":0},
-	{"codigo":10, "nombre":"Esmeralda", "nota1":4.5, "nota2":3.9, "promedio":0}
-]
+var estudiantes = []
+var elCodigo = document.getElementById("codigoEst").value;
+var elNombre = document.getElementById("nombreEst").value;
+var laNota1 = document.getElementById("nota1Est").value;
+var laNota2 = document.getElementById("nota2Est").value;
+/**
+Vamos a declarar el siguiente proceso
+1. Verificar que la info que se ingresa ya no este en otro estudiante
+2. Si el estudiante ya existe, pedir confirmación para cambiar las notas
+3. Si el estudiante no esta, ingresarlo en el JSON
+4. Imprimir en la tabla los estudiantes ingresados en el JSON
+
+Formato para ingresar los datos al JSON:
+{"codigo":10, "nombre":"Esmeralda", "nota1":4.5, "nota2":3.9, "promedio":0}
+**/
+
+
+
 //Ahora vamos a calcular el promedio para cada estudiante
-var j;
-for (j = 0; j < estudiantes.length; j++) {
-	estudiantes[j].promedio = (estudiantes[j].nota1 + estudiantes[j].nota2)/2;
+function promedioIndividual(){
+	var j;
+	for (j = 0; j < estudiantes.length; j++) {
+		estudiantes[j].promedio = (estudiantes[j].nota1 + estudiantes[j].nota2)/2;
+	}
 }
 
 //Declaramos la función para mostrar el JSON estudiantes
