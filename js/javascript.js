@@ -13,11 +13,9 @@ del sitio web, como por ejemplo los clics para mostrar menu y el efecto de onloa
 /*
 Declaramos el JSON Estudiantes para nuestra tabla
 */
-var estudiantes = []
-var elCodigo = document.getElementById("codigoEst").value;
-var elNombre = document.getElementById("nombreEst").value;
-var laNota1 = document.getElementById("nota1Est").value;
-var laNota2 = document.getElementById("nota2Est").value;
+var estudiantes = [
+
+]
 /**
 Vamos a declarar el siguiente proceso
 1. Verificar que la info que se ingresa ya no este en otro estudiante
@@ -28,8 +26,74 @@ Vamos a declarar el siguiente proceso
 Formato para ingresar los datos al JSON:
 {"codigo":10, "nombre":"Esmeralda", "nota1":4.5, "nota2":3.9, "promedio":0}
 **/
+document.getElementById("ingresarDatos").addEventListener("click", manejoDatos);
+function manejoDatos(){
+	var elCodigo = document.getElementById("codigoEst").value;
+	var elNombre = document.getElementById("nombreEst").value;
+	var laNota1 = document.getElementById("nota1Est").value;
+	var laNota2 = document.getElementById("nota2Est").value;
+	var notificaciones = document.getElementById("mensajeProceso");
+	var datosIguales = "El código y el nombre son iguales"
 
+	elNombre = elNombre.charAt(0).toUpperCase() + elNombre.slice(1).toLowerCase();
+	console.log(elCodigo + " - " + elNombre + " - " + laNota1 + " - " + laNota2);
 
+	var nuevo = 0;
+	if(estudiantes.length == 0){
+		console.log("Ingresando el primer estudiante");
+		estudiantes.push({"codigo":Number(elCodigo), "nombre":elNombre, "nota1":Number(laNota1), "nota2":Number(laNota2), "promedio":0});
+		console.log("Proceso terminado");
+		console.log(estudiantes);
+	}else{
+		for(var exp=0; exp < estudiantes.length; exp++){
+			if(estudiantes[exp].codigo == elCodigo){
+				if(estudiantes[exp].nombre == elNombre){
+					elMensaje(datosIguales);
+				}else{
+					console.log("este codigo lo tiene otro estudiante, por favor revisar")
+				}
+			}else{
+				nuevo=1;
+				console.log("activamos nuevo 1 para crear un nuevo estudiante")
+			}
+		}
+		if(nuevo==1){
+			console.log("estoy creando un nuevo estudiante");
+			estudiantes.push({"codigo":Number(elCodigo), "nombre":elNombre, "nota1":Number(laNota1), "nota2":Number(laNota2), "promedio":0});
+			console.log("Proceso terminado");
+			console.log(estudiantes);
+			nuevo = 0;
+		}
+	}
+	promedioIndividual();
+	limpiarInputs();
+}
+
+//Codigo para mostrar los mensajes del estado del proceso.
+function elMensaje(elmensaje){
+	setTimeout(function(){
+		mostrarMensaje(elmensaje);
+	},0);
+	setTimeout(ocultarMensaje, 5000);
+}
+function mostrarMensaje(elmensaje){
+	notificaciones.style.display = "block";
+	notificaciones.style.animation = "entradacaja 1s linear";
+	notificaciones.innerHTML = elmensaje;
+}
+
+function ocultarMensaje(){
+	notificaciones.innerHTML = "";
+	notificaciones.style.display = "none";
+}
+
+//Limpiar inputs luego del proceso
+function limpiarInputs(){
+	document.getElementById("codigoEst").value = "";
+	document.getElementById("nombreEst").value = "";
+	document.getElementById("nota1Est").value = "";
+	document.getElementById("nota2Est").value = "";
+}
 
 //Ahora vamos a calcular el promedio para cada estudiante
 function promedioIndividual(){

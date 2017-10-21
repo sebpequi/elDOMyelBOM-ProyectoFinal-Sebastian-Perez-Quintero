@@ -46,6 +46,17 @@ table, th, tr, td {
 	}
 }
 
+@-webkit-keyframes salidamensaje {
+	0% {
+		margin-top: 0%;
+	}
+	70% {
+		margin-top: 5%;
+	}
+	100% {
+		margin-top: 100%;
+	}
+}
 /*** Area del Header ***/
 #logo_titulo {
 	width:100%;
