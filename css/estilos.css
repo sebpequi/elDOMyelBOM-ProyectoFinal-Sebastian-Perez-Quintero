@@ -84,13 +84,55 @@ table, th, tr, td {
 #contenido {
 	width:98%;
 	margin:10px auto 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+/*** Section Form Ingresar Notas ***/
+#formDatos {
+	overflow: hidden;
 }
 
-#anuncio_tabla {
-	display:none;
-	text-align:center;
-	font-size:12px;
+input[type='text'] {
+ 	width:90%;
+	padding: 1% 10px;
+	margin-bottom:5px;
 }
+
+#ingresarDatos {
+	padding: 10px 15px 10px 15px;
+	border: none;
+	border-radius:10px;
+	color: white;
+	cursor:pointer;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+
+	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
+	background: -o-linear-gradient(top, #0045A6 , #03275A);
+	background: -moz-linear-gradient(top, #0045A6 , #03275A);
+	background: linear-gradient(top, #0045A6 , #03275A);
+}
+
+#ingresarDatos:hover {
+	color: white;
+	cursor:pointer;
+
+	background: -webkit-linear-gradient(top, #a60210 , #5b0303);
+	background: -o-linear-gradient(top, #a60210 , #5b0303);
+	background: -moz-linear-gradient(top, #a60210 , #5b0303);
+	background: linear-gradient(top, #a60210 , #5b0303);
+}
+
+#mensajeProceso {
+	width:auto;
+	margin-top:10px;
+	background-color: white;
+	color:#e2000e;
+	padding:10px;
+	display:none;
+}
+
 
 /*** Las tablas de los datos ***/
 #contenedor_tablas {
@@ -105,7 +147,7 @@ table, th, tr, td {
 }
 
 #tablaestudiantes {
-	width:70%;
+	width:95%;
 }
 
 #mlest thead th {
@@ -194,11 +236,30 @@ table, th, tr, td {
 	font-weight:900;
 }
 
-/*** Area de los Mensajes ***/
-#mensajes {
-	width:100%;
+#btnCalcularP {
+	margin-top:10px;
+	border: solid 1px #f2f2f2;
+	border-radius:10px;
+	color: white;
+	cursor:pointer;
+	width:auto;
+	display:block;
+	padding:10px 15px 10px 15px;
+
+	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
+	background: -o-linear-gradient(top, #0045A6 , #03275A);
+	background: -moz-linear-gradient(top, #0045A6 , #03275A);
+	background: linear-gradient(top, #0045A6 , #03275A);
 }
 
+#btnCalcularP:hover, #mensajes_aliento > li:hover, #ganadores > h4:hover, #perdedores > h4:hover {
+	background: -webkit-linear-gradient(top, #02a603 , #035b04);
+	background: -o-linear-gradient(top, #02a603 , #035b04);
+	background: -moz-linear-gradient(top, #02a603 , #035b04);
+	background: linear-gradient(top, #02a603 , #035b04);
+}
+
+/*** Area de los Mensajes ***/
 #mensajes_aliento {
 	display:flex;
 	flex-direction:row;
@@ -246,11 +307,6 @@ table, th, tr, td {
 }
 
 /*** Mostrar las personas que van Ganando y los que van perdiendo ***/
-#lasnoticias {
-	width:90%;
-	padding:5%;
-}
-
 #lasnoticias h4 {
 	text-align:center;
 	color:#fff;
@@ -260,6 +316,10 @@ table, th, tr, td {
 	background:rgba(102,102,102,0.5);
 	border-radius: 15px 15px 0 0;
 	cursor:pointer;
+}
+
+#lasnoticias p:first-child {
+	margin-top:0px;
 }
 
 #lasnoticias p {
@@ -335,8 +395,10 @@ footer span {
 }
 
 
-/***************************** Diseño web Responsive *****************************/
-/***Laptops y computers***/
+/*************************************************************
+Diseño web Responsive
+*************************************************************/
+/*****************************************Laptops y computers************/
 @media screen and (min-width:700px) {
 #caja_sitio {
 	width:100%;
@@ -362,96 +424,54 @@ footer span {
 	padding-left:5%;
 }
 
-/*** Section Form Ingresar Notas ***/
-#aIngresarNotas {
-	background-color: rgba(0, 13, 130, 0.59);
-	padding:20px 10px 20px 10px;
-}
-
-#codigoEst, #nota1Est, #nota2Est {
-	max-width:80px;
-}
-
-#aIngresarNotas > input {
-	padding: 5px 10px;
-}
-
-#ingresarDatos {
-	padding: 10px 15px 10px 15px;
-	border: none;
-	border-radius:10px;
-	color: white;
-	cursor:pointer;
-
-	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
-	background: -o-linear-gradient(top, #0045A6 , #03275A);
-	background: -moz-linear-gradient(top, #0045A6 , #03275A);
-	background: linear-gradient(top, #0045A6 , #03275A);
-}
-
-#ingresarDatos:hover {
-	color: white;
-	cursor:pointer;
-
-	background: -webkit-linear-gradient(top, #a60210 , #5b0303);
-	background: -o-linear-gradient(top, #a60210 , #5b0303);
-	background: -moz-linear-gradient(top, #a60210 , #5b0303);
-	background: linear-gradient(top, #a60210 , #5b0303);
-}
-
-#mensajeProceso {
-	width:auto;
-	margin-top:10px;
-	background-color: white;
-	color:#e2000e;
-	padding:10px;
-	display:none;
-}
-
-#btnCalcularP {
-	margin-top:10px;
-	border: solid 1px #f2f2f2;
-	border-radius:10px;
-	color: white;
-	cursor:pointer;
-	width:auto;
-	display:block;
-	padding:10px 15px 10px 15px;
-
-	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
-	background: -o-linear-gradient(top, #0045A6 , #03275A);
-	background: -moz-linear-gradient(top, #0045A6 , #03275A);
-	background: linear-gradient(top, #0045A6 , #03275A);
-}
-
-#btnCalcularP:hover, #mensajes_aliento > li:hover, #ganadores > h4:hover, #perdedores > h4:hover {
-	background: -webkit-linear-gradient(top, #02a603 , #035b04);
-	background: -o-linear-gradient(top, #02a603 , #035b04);
-	background: -moz-linear-gradient(top, #02a603 , #035b04);
-	background: linear-gradient(top, #02a603 , #035b04);
-}
-
-/*** Las tablas de los datos ***/
-#contenedor_tablas {
+/*** El contenedor del contenido ***/
+#contenido{
 	display:flex;
 	flex-direction:row;
 }
 
-/*** Tabla lista de los estudiantes ***/
-#tablaestudiantes {
-	width:52%;
+/*** Section Form Ingresar Notas ***/
+#aIngresarNotas {
+	width:46%;
+	padding:20px 1% 20px 1%;
 }
 
-/*** Tabla del promedio ***/
+/*** Las tablas de los datos ***/
+#contenedor_tablas {
+	width:52%;
+	border-left:1px dotted rgb(10, 9, 34);
+}
+
+/*** Tabla lista de los estudiantes ***/
+#tablaestudiantes {
+
+}
+
+/*** Area de los mensajes ***/
 #promedio {
-	width:46%;
+	width:98%;
 	min-height:350px;
 	padding:20px 1% 20px 1%;
 }
 
+#contentMensajes {
+	display:flex;
+	flex-direction:row;
 }
 
-/***Dispositivos moviles***/
+#mensajes {
+	width:48%;
+	padding:5px 1% 10px 1%;
+}
+
+#lasnoticias {
+	width:48%;
+	padding:5px 1% 10px 1%;
+}
+
+}
+
+/************************************************ Dispositivos moviles ************/
 @media screen and (max-width:699px) {
 #caja_sitio {
 	width:98%;
@@ -478,71 +498,21 @@ footer span {
 	font-size:0.7rem;
 }
 
-/*** Menu ***/
-nav {
-	overflow:hidden;
-}
-#mostrar_menu {
-	display:block;
-	text-align:center;
-	padding:20px 0 15px 0;
-	margin: 0;
-}
-
-#mostrar_menu::before {
-	content: url(imagenes/menu-logox16.png);
-	margin-right:5px;
-}
-
-#menu_comandos {
-	margin:0 0 5px 0;
-	padding:0;
-	display: none;
+/*** El contenedor del contenido ***/
+#contenido {
+	display:flex;
 	flex-direction:column;
 }
 
-/*** Animación menu movil ***/
-@keyframes mostrarmenu {
-	0% {
-		margin-top: -50%;
-	}
-	100% {
-		margin-top: 0%;
-	}
-}
-
-
-nav #menu_comandos li {
-	border: solid 1px #f2f2f2;
-	color: white;
-	cursor:pointer;
-	text-align:center;
-
-	background: -webkit-linear-gradient(top, #0045A6 , #03275A);
-	background: -o-linear-gradient(top, #0045A6 , #03275A);
-	background: -moz-linear-gradient(top, #0045A6 , #03275A);
-	background: linear-gradient(top, #0045A6 , #03275A);
-	opacity:0.5;
-}
-
-nav #menu_comandos li a {
-	width:auto;
-	padding:15px 15px 15px 15px;
-	color:white;
-	display:block;
-}
-
-nav #menu_comandos li:first-child {
-	border-radius: 15px 15px 0 0;
-}
-
-nav #menu_comandos li:last-child {
-	border-radius: 0 0 15px 15px;
+/*** El area del formulario ***/
+#aingresarNotas {
+	width:100%;
+	margin-bottom:15px;
 }
 /*** Las tablas de los datos ***/
 #contenedor_tablas {
-	display:flex;
-	flex-direction:column;
+	width:100%;
+	margin-bottom:15px;
 }
 
 #anuncio_tabla {
@@ -551,8 +521,6 @@ nav #menu_comandos li:last-child {
 
 /*** Tabla lista de los estudiantes ***/
 #tablaestudiantes {
-	width:100%;
-	margin-bottom:15px;
 	overflow-x:auto;
 }
 
@@ -560,11 +528,25 @@ nav #menu_comandos li:last-child {
 	margin:0 auto 0 auto;
 }
 
-/*** Tabla del promedio ***/
+/*** Area de los mensajes ***/
 #promedio {
 	width:90%;
 	padding:5%;
 }
 
+#contentMensajes {
+	display:flex;
+	flex-direction:column;
+}
+
+#mensajes {
+	width:98%;
+	padding:5px 1% 10px 1%;
+}
+
+#lasnoticias {
+	width:98%;
+	padding:5px 1% 10px 1%;
+}
 
 }
